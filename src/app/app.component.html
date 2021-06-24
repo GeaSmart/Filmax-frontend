@@ -1,4 +1,19 @@
-<div class="titulos">
-  <p>hola mundo y el titulo es {{title}}</p>
-  <p (click)="manejarClick()">Mi nombre es {{body}}</p>
+<div>
+  <p>hola mundo y el titulo es {{ title }}</p>
+  <!--variable-->
+  <p>La suma de 3 + 4 es {{ 3 + 4 }}</p>
+  <!--expresión evaluada-->
+  <p>Cuando uno suma 5 y 9 resulta {{ calcularSuma(5, 9) }}</p>
+  <!--función-->
+
+  <hr>
+
+  <div *ngFor="let pelicula of listadoPeliculas; let indice = index" class="contenedor-peliculas">
+    <p>{{indice}} Titulo: {{ pelicula.titulo | uppercase }} </p>
+    <p>Sinopsis: {{ pelicula.sinopsis }} </p>
+    <p>Presupuesto: {{ pelicula.presupuesto | currency: "USD " }}
+    </p>    
+  </div>
 </div>
+
+<!-- <p (click)="manejarClick()">Mi nombre es {{body}}</p> -->
