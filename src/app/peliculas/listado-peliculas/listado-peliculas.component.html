@@ -1,0 +1,14 @@
+<div>  
+    <div *ngIf="!listadoPeliculas">
+      <img src="https://media1.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif" alt=""/>
+    </div>
+  
+    <p *ngIf="listadoPeliculas?.length === 0">No hay peliculas para mostrar</p>
+  
+    <div *ngIf="listadoPeliculas && listadoPeliculas?.length > 0">
+      <div *ngFor="let pelicula of listadoPeliculas; let indice = index" class="contenedor-peliculas">
+        <p>[{{ indice + 1 }}] Titulo: <b> {{ pelicula.titulo | uppercase }} </b></p>
+        <p>Sinopsis: {{ pelicula.sinopsis }} | Presupuesto: {{ pelicula.presupuesto | currency: "USD " }}</p>
+      </div>
+    </div>
+  </div>
