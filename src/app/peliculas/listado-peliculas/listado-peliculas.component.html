@@ -8,7 +8,7 @@
     <div *ngIf="listadoPeliculas && listadoPeliculas?.length > 0">
       <div *ngFor="let pelicula of listadoPeliculas; let indice = index" class="contenedor-peliculas">
         <p>[{{ indice + 1 }}] Titulo: <b> {{ pelicula.titulo | uppercase }} </b></p>
-        <p>Sinopsis: {{ pelicula.sinopsis }} | Presupuesto: {{ pelicula.presupuesto | currency: "USD " }}</p>
+        <p>Sinopsis: {{ pelicula.sinopsis }} | Presupuesto: {{ pelicula.presupuesto | currency: "USD " }} | Fecha de estreno: {{pelicula.fechaEstreno | date }}</p>
       </div>
     </div>
   </div>
