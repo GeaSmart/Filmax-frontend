@@ -1,14 +1,21 @@
-<div>  
-  <div *ngIf="!peliculas">
-    <img src="https://media1.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif" alt=""/>
-  </div>
-  
-  <p *ngIf="peliculas?.length === 0">No hay peliculas para mostrar</p>
-  
-  <ng-container *ngIf="peliculas && peliculas?.length > 0">
-    <div *ngFor="let pelicula of peliculas; let indice = index" class="contenedor-peliculas">
-      <p>[{{ indice + 1 }}] Titulo: <b> {{ pelicula.titulo | uppercase }} <button (click)="remover(indice)">Remover</button></b></p>
-      <p>Sinopsis: {{ pelicula.sinopsis }} | Presupuesto: {{ pelicula.presupuesto | currency: "USD " }} | Fecha de estreno: {{pelicula.fechaEstreno | date }}</p>
+<app-listado-generico [listado]="peliculas">
+  <ng-container contenido>
+    <div
+      *ngFor="let pelicula of peliculas; let indice = index"
+      class="contenedor-peliculas"
+    >
+      <p>
+        [{{ indice + 1 }}] Titulo:
+        <b>
+          {{ pelicula.titulo | uppercase }}
+          <button (click)="remover(indice)">Remover</button></b
+        >
+      </p>
+      <p>
+        Sinopsis: {{ pelicula.sinopsis }} | Presupuesto:
+        {{ pelicula.presupuesto | currency: "USD " }} | Fecha de estreno:
+        {{ pelicula.fechaEstreno | date }}
+      </p>
     </div>
   </ng-container>
-</div>
+</app-listado-generico>

@@ -1,0 +1,13 @@
+<div>  
+    <div *ngIf="!listado">
+      <img src="https://media1.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif" alt=""/>
+    </div>
+    
+    <p *ngIf="listado?.length === 0">No hay elementos para mostrarte</p>
+    
+    <ng-container *ngIf="listado && listado?.length > 0">
+
+        <ng-content select="[contenido]"></ng-content>
+
+    </ng-container>
+  </div>
