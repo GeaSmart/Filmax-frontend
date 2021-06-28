@@ -4,10 +4,15 @@
 
 <app-menu></app-menu>
 
-<h1>Peliculas en cine</h1>
-<app-listado-peliculas [peliculas]="listadoPeliculasCine"></app-listado-peliculas>
+<div class="contenedor">
+  <h1>Peliculas en cine</h1>
+  <app-listado-peliculas
+    [peliculas]="listadoPeliculasCine"
+  ></app-listado-peliculas>
 
-<h1>Futuros estrenos</h1>
-<app-listado-peliculas [peliculas]="listadoPeliculasEstreno"></app-listado-peliculas>
-
+  <h1>Futuros estrenos</h1>
+  <app-listado-peliculas
+    [peliculas]="listadoPeliculasEstreno"
+  ></app-listado-peliculas>
+</div>
 <!-- <p (click)="manejarClick()">Test funcion {{manejarClick()}}</p> -->

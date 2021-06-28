@@ -5,3 +5,6 @@ p{
 .hidden{
     display: none;
 }
+.contenedor{
+    margin:50px;
+}
