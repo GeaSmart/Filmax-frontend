@@ -1,12 +1,15 @@
-<div>  
+<div>
+    <!-- Si la lista es nula o undefined mostrar gif de loading -->
     <div *ngIf="!listado">
-      <img src="https://media1.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif" alt=""/>
+      <img src="https://media1.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif" alt="" />
     </div>
-    
+  
+    <!-- Si la lista tiene longitud cero, mostrar mensaje -->
     <p *ngIf="listado?.length === 0">No hay elementos para mostrarte</p>
-    
+  
+    <!-- Si la lista tiene elementos, iterarla -->
     <ng-container *ngIf="listado && listado?.length > 0">
-
+        <!-- el ng-content es el contenido dinámico de los hijos, el select le da nombre, en este caso se llama contenido -->
         <ng-content select="[contenido]"></ng-content>
 
     </ng-container>
