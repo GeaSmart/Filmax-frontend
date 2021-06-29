@@ -39,48 +39,6 @@ export class AppComponent implements OnInit {
           presupuesto: 1500000,
           fechaEstreno: new Date('02/05/2000'),
         },
-        {
-          titulo: 'Gol',
-          sinopsis: 'Pelicula pa peloteros entusiastas',
-          presupuesto: 500000,
-          fechaEstreno: new Date('01/05/2022'),
-        },
-        {
-          titulo: 'Moana',
-          sinopsis: 'Pelicula pa chibolos sanossd',
-          presupuesto: 433554.99,
-          fechaEstreno: new Date('01/05/2000'),
-        },
-        {
-          titulo: 'Rocky',
-          sinopsis: 'Pelicula pa machos pelos en el pecho',
-          presupuesto: 1500000,
-          fechaEstreno: new Date('02/05/2000'),
-        },
-        {
-          titulo: 'Gol',
-          sinopsis: 'Pelicula pa peloteros entusiastas',
-          presupuesto: 500000,
-          fechaEstreno: new Date('01/05/2022'),
-        },
-        {
-          titulo: 'Moana',
-          sinopsis: 'Pelicula pa chibolos sanossd',
-          presupuesto: 433554.99,
-          fechaEstreno: new Date('01/05/2000'),
-        },
-        {
-          titulo: 'Rocky',
-          sinopsis: 'Pelicula pa machos pelos en el pecho',
-          presupuesto: 1500000,
-          fechaEstreno: new Date('02/05/2000'),
-        },
-        {
-          titulo: 'Gol',
-          sinopsis: 'Pelicula pa peloteros entusiastas',
-          presupuesto: 500000,
-          fechaEstreno: new Date('01/05/2022'),
-        },
       ];
     }, 1000);
   }
