@@ -22,4 +22,12 @@ export class RatingComponent implements OnInit {
     this.maxRatingArray = Array(this.maxRating).fill(0);
   }
 
+  manejarMouseEnter(indice:number){
+    this.selectedRating = indice+1;
+    console.log(this.selectedRating);
+  }
+
+  manejarMouseLeave(){
+    // alert('leave manejado')
+  }
 }
