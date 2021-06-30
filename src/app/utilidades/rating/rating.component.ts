@@ -28,6 +28,7 @@ export class RatingComponent implements OnInit {
   }
 
   manejarMouseLeave(){
-    // alert('leave manejado')
+    this.selectedRating = 0;
+    console.log(this.selectedRating);
   }
 }
