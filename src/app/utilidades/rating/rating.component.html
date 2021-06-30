@@ -2,6 +2,7 @@
     *ngFor="let i of maxRatingArray; let index = index"
     (mouseenter)="manejarMouseEnter(index)"
     (mouseleave)="manejarMouseLeave()"
+    (click)="manejarRate(index)"
     [ngClass]="{checked : selectedRating > index}"
 >
     star
