@@ -15,9 +15,11 @@
     [peliculas]="listadoPeliculasEstreno"
   ></app-listado-peliculas> -->
 
-  <app-rating (rated)="manejarRated($event)"></app-rating> <!-- Se le puede pasar opcionalmente los parámetros al componente: maxRating o selectedRating -->
+  <!-- Se le puede pasar opcionalmente los parámetros al componente: maxRating o selectedRating -->
+  <!-- <app-rating (rated)="manejarRated($event)"></app-rating> -->
 
-    
+      <app-ciclo-de-vida [titulo]="'holi'"></app-ciclo-de-vida>
+      <!-- <app-ciclo-de-vida></app-ciclo-de-vida> -->
 
 </div>
 <!-- <p (click)="manejarClick()">Test funcion {{manejarClick()}}</p> -->
