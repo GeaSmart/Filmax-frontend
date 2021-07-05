@@ -15,7 +15,7 @@
     [peliculas]="listadoPeliculasEstreno"
   ></app-listado-peliculas> -->
 
-  <app-rating></app-rating> <!-- Se le puede pasar opcionalmente los parámetros al componente: maxRating o selectedRating -->
+  <app-rating (rated)="manejarRated($event)"></app-rating> <!-- Se le puede pasar opcionalmente los parámetros al componente: maxRating o selectedRating -->
 
     
 

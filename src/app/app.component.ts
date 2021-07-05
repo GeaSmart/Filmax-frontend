@@ -96,4 +96,8 @@ export class AppComponent implements OnInit {
   calcularSuma(a: number, b: number) {
     return a + b;
   }
+
+  manejarRated(voto:number){
+    alert(voto);
+  }
 }
