@@ -10,6 +10,9 @@ export class CicloDeVidaComponent implements OnInit,OnChanges,OnDestroy,DoCheck,
   @Input()
   titulo:string='';
 
+
+  timer:ReturnType<typeof setInterval>;
+
   constructor() { }
   ngAfterViewInit(): void {
     console.log('on ngAfterViewInit');
@@ -19,11 +22,17 @@ export class CicloDeVidaComponent implements OnInit,OnChanges,OnDestroy,DoCheck,
   }
   ngOnDestroy(): void {
     console.log('on ngOnDestroy');
+    clearInterval(this.timer);
   }
   ngOnChanges(changes: SimpleChanges): void {
     console.log('on ngOnChanges');
+    console.log(changes);
   }
   ngOnInit(): void {
     console.log('on ngOnInit ' + this.titulo);
+    this.timer=
+    setInterval(()=>{
+      console.log(new Date())
+    },1000)
   }
 }

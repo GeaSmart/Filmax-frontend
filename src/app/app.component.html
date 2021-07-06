@@ -18,8 +18,14 @@
   <!-- Se le puede pasar opcionalmente los parámetros al componente: maxRating o selectedRating -->
   <!-- <app-rating (rated)="manejarRated($event)"></app-rating> -->
 
+  <div>
   <input type="text" (input)="manejarTarget($event)">
-      <app-ciclo-de-vida [titulo]="titulo"></app-ciclo-de-vida>
+</div>
+<div>
+  <input type="checkbox" (change)="ocultar=!ocultar"> Ocultar
+</div>
+
+      <app-ciclo-de-vida *ngIf="ocultar" [titulo]="titulo"></app-ciclo-de-vida>
       <!-- <app-ciclo-de-vida></app-ciclo-de-vida> -->
 
 </div>

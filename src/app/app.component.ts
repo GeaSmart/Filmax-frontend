@@ -9,6 +9,7 @@ export class AppComponent implements OnInit {
   listadoPeliculasCine: any;
   listadoPeliculasEstreno: any;
   titulo:string='';
+  ocultar = false;
 
   ngOnInit(): void {
     setTimeout(() => {
