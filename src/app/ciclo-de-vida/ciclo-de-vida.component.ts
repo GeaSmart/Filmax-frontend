@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, DoCheck, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, DoCheck, Input, OnChanges, OnDestroy, OnInit, SimpleChanges, ViewChild } from '@angular/core';
+import { RatingComponent } from '../utilidades/rating/rating.component';
 
 @Component({
   selector: 'app-ciclo-de-vida',
@@ -10,12 +11,17 @@ export class CicloDeVidaComponent implements OnInit,OnChanges,OnDestroy,DoCheck,
   @Input()
   titulo:string='';
 
+  @ViewChild(RatingComponent)
+  ratingCompo:RatingComponent;
 
   timer:ReturnType<typeof setInterval>;
 
-  constructor() { }
+  constructor(private changeDetectorRef:ChangeDetectorRef) { }
+
   ngAfterViewInit(): void {
     console.log('on ngAfterViewInit');
+    this.ratingCompo.selectedRating = 4;
+    this.changeDetectorRef.detectChanges();
   }
   ngDoCheck(): void {
     console.log('on ngDoCheck');
@@ -34,5 +40,6 @@ export class CicloDeVidaComponent implements OnInit,OnChanges,OnDestroy,DoCheck,
     setInterval(()=>{
       console.log(new Date())
     },1000)
+    //this.ratingCompo.selectedRating = 4;
   }
 }
