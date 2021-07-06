@@ -18,7 +18,8 @@
   <!-- Se le puede pasar opcionalmente los parámetros al componente: maxRating o selectedRating -->
   <!-- <app-rating (rated)="manejarRated($event)"></app-rating> -->
 
-      <app-ciclo-de-vida [titulo]="'holi'"></app-ciclo-de-vida>
+  <input type="text" (input)="manejarTarget($event)">
+      <app-ciclo-de-vida [titulo]="titulo"></app-ciclo-de-vida>
       <!-- <app-ciclo-de-vida></app-ciclo-de-vida> -->
 
 </div>

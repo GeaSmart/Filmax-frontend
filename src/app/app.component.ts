@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   listadoPeliculasCine: any;
   listadoPeliculasEstreno: any;
+  titulo:string='';
 
   ngOnInit(): void {
     setTimeout(() => {
@@ -99,5 +100,9 @@ export class AppComponent implements OnInit {
 
   manejarRated(voto:number){
     alert(voto);
+  }
+
+  manejarTarget(e:any){
+    this.titulo = e.target.value;
   }
 }
