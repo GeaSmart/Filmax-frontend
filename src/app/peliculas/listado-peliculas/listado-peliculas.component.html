@@ -1,9 +1,26 @@
 <app-listado-generico [listado]="peliculas">
   <!-- Renderiza todo ng-content del componente padre que se llame contenido -->
   <ng-container contenido>
-    <div *ngFor="let pelicula of peliculas; let indice = index" class="contenedor-peliculas">
-      <p>[{{ indice + 1 }}] Titulo:<b>{{ pelicula.titulo | uppercase }}<button (click)="remover(indice)">Remover</button></b></p>
-      <p>Sinopsis: {{ pelicula.sinopsis }} | Presupuesto:{{ pelicula.presupuesto | currency: "USD " }} | Fecha de estreno: {{ pelicula.fechaEstreno | date }}</p>
+    <div class="peliculas-contenedor">
+      <div
+        *ngFor="let pelicula of peliculas; let indice = index"
+        class="contenedor-peliculas"
+      >
+        <a>
+          <img [src]="pelicula.poster" alt="Poster">
+        </a>
+        <p>
+          <a href="">{{pelicula.titulo}}</a>
+        </p>
+        <div>
+          <a href="" mat-mat-flat-button color ="primary">
+            Editar
+          </a>
+          <button mat-mat-flat-button color ="warn" type="button">
+            Borrar
+          </button>
+        </div>
+      </div>
     </div>
   </ng-container>
 </app-listado-generico>
