@@ -1,10 +1,4 @@
 <app-listado-generico [listado]="peliculas">
-  <ng-container cargando>
-    <img src="https://i0.wp.com/djsanta.es/wp-content/uploads/2020/08/loader.gif?ssl=1" alt="">
-  </ng-container>
-  <ng-container vacio>
-    <p>Mensaje personalizado que no hay peliculas para <b>mostrarte causa</b>.</p>
-  </ng-container>
   <!-- Renderiza todo ng-content del componente padre que se llame contenido -->
   <ng-container contenido>
     <div *ngFor="let pelicula of peliculas; let indice = index" class="contenedor-peliculas">

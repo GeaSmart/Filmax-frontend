@@ -29,18 +29,18 @@ export class AppComponent implements OnInit {
       ];
 
       this.listadoPeliculasEstreno = [
-        {
-          titulo: 'Moana',
-          sinopsis: 'Pelicula pa chibolos sanossd',
-          presupuesto: 433554.99,
-          fechaEstreno: new Date('01/05/2000'),
-        },
-        {
-          titulo: 'Rocky',
-          sinopsis: 'Pelicula pa machos pelos en el pecho',
-          presupuesto: 1500000,
-          fechaEstreno: new Date('02/05/2000'),
-        },
+        // {
+        //   titulo: 'Moana',
+        //   sinopsis: 'Pelicula pa chibolos sanossd',
+        //   presupuesto: 433554.99,
+        //   fechaEstreno: new Date('01/05/2000'),
+        // },
+        // {
+        //   titulo: 'Rocky',
+        //   sinopsis: 'Pelicula pa machos pelos en el pecho',
+        //   presupuesto: 1500000,
+        //   fechaEstreno: new Date('02/05/2000'),
+        // },
       ];
     }, 1000);
   }
@@ -103,7 +103,7 @@ export class AppComponent implements OnInit {
     alert(voto);
   }
 
-  manejarTarget(e:any){
+  manejarTarget(e){
     this.titulo = e.target.value;
   }
 }
