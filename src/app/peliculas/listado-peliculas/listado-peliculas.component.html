@@ -4,19 +4,19 @@
     <div class="peliculas-contenedor">
       <div
         *ngFor="let pelicula of peliculas; let indice = index"
-        class="contenedor-peliculas"
+        class="pelicula-contenedor"
       >
         <a>
           <img [src]="pelicula.poster" alt="Poster">
         </a>
         <p>
-          <a href="">{{pelicula.titulo}}</a>
+          <a>{{pelicula.titulo}}</a>
         </p>
         <div>
-          <a href="" mat-mat-flat-button color ="primary">
+          <a href="" mat-flat-button color ="primary">
             Editar
           </a>
-          <button mat-mat-flat-button color ="warn" type="button">
+          <button mat-flat-button color ="warn">
             Borrar
           </button>
         </div>
