@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { IndiceActoresComponent } from './actores/indice-actores/indice-actores.component';
+import { CrearGeneroComponent } from './generos/crear-genero/crear-genero.component';
 import { IndiceGenerosComponent } from './generos/indice-generos/indice-generos.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path:'actores',
     component:IndiceActoresComponent
+  },
+  {
+    path:'generos/crear',
+    component:CrearGeneroComponent
   }
 ];
 
