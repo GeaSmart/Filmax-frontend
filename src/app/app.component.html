@@ -1,28 +1,6 @@
-<!-- <input type="file" class="hidden" #cargador>
-
-<button (click)="cargador.click()">Cargar archivos</button> -->
-
 <app-menu></app-menu>
 
-<div class="contenedor">
-  <h1>Peliculas en cine</h1>
-  <app-listado-peliculas
-    [peliculas]="listadoPeliculasCine"
-  ></app-listado-peliculas>
+  <div class="contenedor">
+    <router-outlet></router-outlet>
 
-  <h1>Futuros estrenos</h1>
-  <app-listado-peliculas
-    [peliculas]="listadoPeliculasEstreno"
-  ></app-listado-peliculas>
-
-  <!-- Se le puede pasar opcionalmente los parámetros al componente: maxRating o selectedRating -->
-  <!-- <app-rating (rated)="manejarRated($event)"></app-rating> -->
-
-  <!-- <div>
-  <input type="text" (input)="manejarTarget($event)">
 </div>
-<div>
-  <input type="checkbox" (change)="ocultar=!ocultar"> Ocultar
-</div> -->
-</div>
-<!-- <p (click)="manejarClick()">Test funcion {{manejarClick()}}</p> -->
