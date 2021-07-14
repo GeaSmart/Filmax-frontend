@@ -11,6 +11,7 @@ import { MenuComponent } from './menu/menu.component';
 import { RatingComponent } from './utilidades/rating/rating.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { IndiceGenerosComponent } from './generos/indice-generos/indice-generos.component';
+import { IndiceActoresComponent } from './actores/indice-actores/indice-actores.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { IndiceGenerosComponent } from './generos/indice-generos/indice-generos.
     MenuComponent,
     RatingComponent,
     LandingPageComponent,
-    IndiceGenerosComponent    
+    IndiceGenerosComponent,
+    IndiceActoresComponent    
   ],
   imports: [
     BrowserModule,
