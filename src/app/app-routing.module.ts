@@ -31,6 +31,7 @@ const routes: Routes = [
   //de indice peliculas no lo creamos porque usaremos el de filtro-peliculas
   {path: 'peliculas/crear',component: CrearPeliculaComponent},
   {path: 'peliculas/editar/:id',component: EditarPeliculaComponent},
+  {path:'**',redirectTo:''}
 
 ];
 
